@@ -1,0 +1,12 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i');
+</style>
+
+<h1>All tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %> -- <%= link_to "Delete", task_path(task), method: :delete %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a task", new_path %>

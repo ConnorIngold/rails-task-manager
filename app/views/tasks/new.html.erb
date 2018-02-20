@@ -1,0 +1,10 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400i');
+</style>
+<%= form_for @task, html: { class: "task-form" } do |f| %>
+  <%= f.label "Task Name" %>
+  <%= f.text_field :title %>
+  <%= f.label "Task Description" %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+<% end %>
